@@ -1,0 +1,59 @@
+/* FOOTER */
+
+footer {
+  margin-top: 100px;
+  border-top: 1px solid rgb(208, 208, 208);
+}
+
+p {
+  margin: 0;
+}
+
+.row {
+  margin: 5px 0;
+}
+
+.morelinksrow {
+	margin: 2px 0;
+
+  color: #6b6b6b;
+	text-decoration: underline;
+	text-decoration-color: transparent;
+
+  -webkit-transition: color 0.2s,
+											text-decoration-color 0.2s;
+  -moz-transition: color 0.2s,
+									 text-decoration-color 0.2s;
+  -o-transition: color 0.2s,
+								 text-decoration-color 0.2s;
+  transition: color 0.2s,
+							text-decoration-color 0.2s;
+}
+
+.activemorelinksrow {
+  color: #000;
+}
+
+.morelinksrow:hover {
+	text-decoration-color: rgb(0, 133, 200);
+  color: rgb(0, 133, 200);
+}
+
+.btn-outline {
+}
+
+.btn-mail {
+  color: rgb(0, 0, 0);
+}
+
+.btn-phone {
+  color: rgb(0, 135, 2);
+}
+
+.btn-linkedin {
+  color: rgb(0, 132, 255);
+}
+
+.btn-github {
+  color: rgb(94, 94, 94);
+}

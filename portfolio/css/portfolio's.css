@@ -1,0 +1,59 @@
+.card {
+    margin-top: 20px;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* general styling for the go-to-portfolio-buttons: */
+.card-link {
+    margin-top: 10px;
+    padding: 1rem 0;
+    border-radius: 6px;
+
+    color: white;
+    background-color: rgb(133, 133, 254);
+
+    transition: background-color 0.2s ease-in-out;
+}
+
+.card-link:hover{
+    background-color: rgb(85, 85, 253);
+    color: white;
+}
+
+/* individual styling for the go-to-portfolio buttons: */
+.card-2 {
+    background-color: rgb(255, 219, 88);
+    color: #000;
+}
+
+.card-2:hover {
+    background-color: rgb(255, 183, 0);
+    color: #000;
+}
+
+.card-3 {
+    background-color: rgb(255, 102, 88);
+}
+
+.card-3:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+.card-4 {
+    background-color: rgb(21, 196, 235);
+}
+
+.card-4:hover {
+    background-color: rgb(0, 153, 255);
+}
+/* END OF individual styling for the go-to-portfolio buttons: */
+
+
+.card-link-text {
+    font-size: 1rem;
+    font-weight: 500;
+}
