@@ -1,3 +1,11 @@
 .page-title {
-    margin: 30px 0;
+  margin: 30px 0;
+}
+
+p {
+  margin: 0;
+}
+
+.row {
+  margin: 5px 0;
 }
