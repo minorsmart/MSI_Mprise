@@ -1,11 +1,19 @@
+:root {
+  --bg-color: rgb(242, 242, 242);
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: var(--bg-color);
+}
+
 .page-title {
   margin: 30px 0;
 }
 
 p {
   margin: 0;
-}
-
-.row {
-  margin: 5px 0;
 }

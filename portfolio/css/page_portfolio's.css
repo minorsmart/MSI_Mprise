@@ -14,7 +14,8 @@
 }
 
 .card {
-    margin-top: 20px;
+    margin: 17px 0;
+    padding-bottom: 70px;
     transition: box-shadow 0.2s ease-in-out;
 }
 
@@ -25,8 +26,11 @@
 /* general styling for the go-to-portfolio-buttons: */
 .card-link {
     margin-top: 10px;
+    margin-bottom: -50px;
     padding: 1rem 0;
     border-radius: 6px;
+
+    justify-content: flex-end;
 
     color: white;
     background-color: var(--card1-color);
@@ -71,4 +75,8 @@
 .card-link-text {
     font-size: 1rem;
     font-weight: 500;
+}
+
+.copyright {
+    margin-top: 50px;
 }

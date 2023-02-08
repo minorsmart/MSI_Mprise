@@ -1,0 +1,81 @@
+.navbar {
+    background-color: var(--bg-color);
+    border-bottom: 1px solid rgb(208, 208, 208);
+    padding: 0;
+}
+
+.navbar-brand {
+    margin: 0 3% 0 50px;
+}
+
+.navbar-item {
+    display: flex;
+    color:#000;
+    padding: 25px;
+}
+
+.navbar-item-icon {
+    margin-right: 7px;
+}
+
+.navbar-item-text {
+    font-size: 13.5pt;
+}
+
+/* NAVBAR BORDERS/LINES: */
+.navbar-homepage-link {
+    border-left: 1px solid rgb(208, 208, 208);
+}
+
+.navbar-project-link {
+    border-left: 1px solid rgb(208, 208, 208);
+    border-right: 1px solid rgb(208, 208, 208);
+}
+
+.navbar-personal-portfolios-link {
+    border-right: 1px solid rgb(208, 208, 208);
+}
+
+.navbar-smart-connections-link {
+    border-right: 1px solid rgb(208, 208, 208);
+}
+
+/* FOR EACH NAVBAR BOX: */
+.navbar-item-portfolios {
+    color: var(--personal-portfolios-hover-color);
+}
+
+.navbar-item-connections {
+    color: var(--smart-connections-hover-color);
+}
+
+.navbar-item-project {
+    color: var(--project-hover-color);
+}
+
+.navbar-item-homepage {
+    color: var(--homepage-hover-color);
+}
+
+.navbar-item-portfolios:hover {
+    color: var(--personal-portfolios-hover-color);
+}
+
+.navbar-item-connections:hover {
+    color: var(--smart-connections-hover-color);
+}
+
+.navbar-item-project:hover {
+    color: var(--project-hover-color);
+}
+
+.navbar-item-homepage:hover {
+    color: var(--homepage-hover-color);
+}
+
+
+
+.active-navbar-page {
+    color: #000;
+background-color: rgba(150, 150, 150, .2);
+}

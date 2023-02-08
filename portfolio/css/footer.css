@@ -1,13 +1,45 @@
 /* FOOTER */
 
+:root {
+  --homepage-hover-color: rgb(3, 132, 201);
+  --project-hover-color: rgb(218, 131, 31);
+  --personal-portfolios-hover-color: rgb(143, 33, 202);
+  --smart-connections-hover-color: rgb(0, 135, 2);
+}
+
 footer {
+  background-color: rgb(242, 242, 242);
   margin-top: 100px;
+  padding-top: 50px;
   border-top: 1px solid rgb(208, 208, 208);
 }
 
-.morelinksrow {
-	margin: 2px 0;
+.footer-title {
+  font-size: 2em;
+}
 
+/* Foreach row in the footer */
+footer > .container > .row > div > .row {
+  /* background: red; */
+  margin: 6px 0;
+}
+
+/* One row in the footer i.e. "<mail icon> A.Vago@student.han.nl" */
+.footer-row-container {
+  display: flex;
+  margin: 1px 0;
+}
+
+.footer-icon {
+  margin-right: 7px;
+}
+
+.footer-text {
+  padding-top: 0.5px;
+}
+
+
+.more-links-row {
   color: #6b6b6b;
 	text-decoration: underline;
 	text-decoration-color: transparent;
@@ -22,20 +54,35 @@ footer {
 							text-decoration-color 0.2s;
 }
 
-.activemorelinksrow {
+.active-link-page {
   color: #000;
 }
 
-.morelinksrow:hover {
-	text-decoration-color: rgb(0, 133, 200);
-  color: rgb(0, 133, 200);
+.homepage-link:hover {
+  text-decoration-color: var(--homepage-hover-color);
+  color: var(--homepage-hover-color);
 }
 
-.btn-outline {
+.project-link:hover {
+  text-decoration-color: var(--project-hover-color);
+  color: var(--project-hover-color);
 }
+
+.personal-portfolios-link:hover {
+  text-decoration-color: var(--personal-portfolios-hover-color);
+  color: var(--personal-portfolios-hover-color);
+}
+
+.smart-connections-link:hover {
+  text-decoration-color: var(--smart-connections-hover-color);
+  color: var(--smart-connections-hover-color);
+}
+
+
+
 
 .btn-mail {
-  color: rgb(0, 0, 0);
+  color: rgb(246, 120, 23);
 }
 
 .btn-phone {
