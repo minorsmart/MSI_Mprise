@@ -17,3 +17,32 @@ html {
 p {
   margin: 0;
 }
+
+.copyright {
+  margin-top: 50px;
+}
+
+/* ONLY IF YOU KNOW WHAT YOU ARE DOING (changes the width of the entire content of all pages) */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1500px;
+  }
+}

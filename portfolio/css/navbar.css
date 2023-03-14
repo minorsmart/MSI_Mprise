@@ -1,81 +1,96 @@
 .navbar {
-    background-color: var(--bg-color);
-    border-bottom: 1px solid rgb(208, 208, 208);
-    padding: 0;
+  background-color: var(--bg-color);
+  border-bottom: 1px solid rgb(208, 208, 208);
+  padding: 0;
 }
 
 .navbar-brand {
-    margin: 0 3% 0 50px;
+  margin: 0 3% 0 50px;
 }
 
 .navbar-item {
-    display: flex;
-    color:#000;
-    padding: 25px;
+  display: flex;
+  color: #000;
+  padding: 25px;
 }
 
 .navbar-item-icon {
-    margin-right: 7px;
+  margin-right: 7px;
 }
 
 .navbar-item-text {
-    font-size: 13.5pt;
+  font-size: 13.5pt;
 }
 
-/* NAVBAR BORDERS/LINES: */
-.navbar-homepage-link {
-    border-left: 1px solid rgb(208, 208, 208);
+/* PORTFOLIOS: */
+.navbar_item_portfolios {
+  border-right: 1px solid rgb(208, 208, 208);
+  color: var(--personal-portfolios-hover-color);
 }
 
-.navbar-project-link {
-    border-left: 1px solid rgb(208, 208, 208);
-    border-right: 1px solid rgb(208, 208, 208);
+.navbar_item_portfolios:hover {
+  color: var(--personal-portfolios-hover-color);
 }
 
-.navbar-personal-portfolios-link {
-    border-right: 1px solid rgb(208, 208, 208);
+/* CONNECTIONS */
+.navbar_item_connections {
+  border-right: 1px solid rgb(208, 208, 208);
+  color: var(--smart-connections-hover-color);
 }
 
-.navbar-smart-connections-link {
-    border-right: 1px solid rgb(208, 208, 208);
+.navbar_item_connections:hover {
+  color: var(--smart-connections-hover-color);
 }
 
-/* FOR EACH NAVBAR BOX: */
-.navbar-item-portfolios {
-    color: var(--personal-portfolios-hover-color);
+/* PROJECT: */
+.navbar_item_project {
+  border-left: 1px solid rgb(208, 208, 208);
+  border-right: 1px solid rgb(208, 208, 208);
+  color: var(--project-hover-color);
 }
 
-.navbar-item-connections {
-    color: var(--smart-connections-hover-color);
+.navbar_item_project:hover {
+  color: var(--project-hover-color);
 }
 
-.navbar-item-project {
-    color: var(--project-hover-color);
+/* HOME: */
+.navbar_item_home {
+  border-left: 1px solid rgb(208, 208, 208);
+  color: var(--homepage-hover-color);
 }
 
-.navbar-item-homepage {
-    color: var(--homepage-hover-color);
+.navbar_item_home:hover {
+  color: var(--homepage-hover-color);
 }
 
-.navbar-item-portfolios:hover {
-    color: var(--personal-portfolios-hover-color);
-}
-
-.navbar-item-connections:hover {
-    color: var(--smart-connections-hover-color);
-}
-
-.navbar-item-project:hover {
-    color: var(--project-hover-color);
-}
-
-.navbar-item-homepage:hover {
-    color: var(--homepage-hover-color);
-}
-
-
-
+/* CURRENT ACTYIVE NAVBAR: */
 .active-navbar-page {
-    color: #000;
-background-color: rgba(150, 150, 150, .2);
+  color: #000;
+  background-color: rgba(150, 150, 150, 0.2);
+}
+
+.dropdown-menu {
+  width: 15.5rem;
+  background-color: var(--bg-color);
+}
+
+.dropdown-item-text {
+  font-size: 1.1rem;
+  padding-left: .5rem;
+}
+
+/* DROPDOWN PORTFOLIOS */
+@media all and (min-width: 992px) {
+  .dropdown-menu {
+    display: none;
+  }
+
+  .nav-item:hover .dropdown-menu {
+    display: block;
+  }
+
+  /* The following makes sure the cursor can be on the dropdown without it disappearing again */
+  .navbar .nav-item .dropdown-menu {
+    margin-top: 0;
+  }
 }
