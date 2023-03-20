@@ -13,9 +13,12 @@
     <link rel="stylesheet" href="../css/general_styling.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/portfolio_anthony.css">
+
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="../index.html">
             <img src="../images/msi logo photoshop.png" width="140" class="img-fluid" alt="">
@@ -63,7 +66,8 @@
 
                 <!-- Indiv. portfolio's: -->
                 <li class="nav-item dropdown">
-                    <a class="navbar-item nav-link navbar_item_portfolios active-navbar-page" href="../portfolio's.html">
+                    <a class="navbar-item nav-link navbar_item_portfolios active-navbar-page"
+                        href="../portfolio's.html">
                         <div class="navbar-item-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                 class="bi bi-clipboard-data" viewBox="0 0 16 16" style="margin-top: -5px;">
@@ -142,6 +146,80 @@
 
     <div class="container">
         <h1 class="page-title">Portfolio van Anthony Vágó</h1>
+
+        <h3>Selecteer een onderwerp</h3>
+
+        <script type="text/javascript">
+            myNamespace = {
+                index: 0
+            };
+
+            function toggle_visibility(id) {
+                var e = document.getElementById(id);
+                e.style.display = 'block';
+
+                // Set the z-index of the element to the highest value
+                myNamespace.index++;
+                e.style.zIndex = myNamespace.index;
+                console.log("Set z-index of element '" + id + "' to: " + myNamespace.index);
+            }
+        </script>
+
+        <div class="knowledge_acquisition_container row">
+            <div class="col-md-4 knowledge_acquisition_subject_list">
+                <a id="business_button" onclick="toggle_visibility('content_business');" class="list-group-item">Smart
+                    Business</a>
+                <a id="connection_button" onclick="toggle_visibility('content_connection');"
+                    class="list-group-item">Smart Connection</a>
+                <a id="technology_button" onclick="toggle_visibility('content_technology');"
+                    class="list-group-item">Smart Technology</a>
+                <a id="printing_button" onclick="toggle_visibility('content_3d_printing');"
+                    class="list-group-item">3D-printing</a>
+                <a id="brains_button" onclick="toggle_visibility('content_brains');" class="list-group-item">Het
+                    brein</a>
+            </div>
+
+            <div class="col-md-8 content_container">
+                <div class="knowledge_acquisition_content" id="content_business">
+                    <h4>Banaan 1</h4>
+                    <p>
+                        uitleg banaan 1
+                    </p>
+                </div>
+
+                <div class="knowledge_acquisition_content" id="content_connection">
+                    <h4>Banaan 2</h4>
+                    <p>
+                        uitleg banaan 2
+                    </p>
+                </div>
+
+                <div class="knowledge_acquisition_content" id="content_technology">
+                    <h4>Banaan 3</h4>
+                    <p>
+                        uitleg banaan 3
+                    </p>
+                </div>
+
+                <div class="knowledge_acquisition_content" id="content_3d_printing">
+                    <h4>Banaan 4</h4>
+                    <p>
+                        uitleg banaan 4
+                    </p>
+                </div>
+
+                <div class="knowledge_acquisition_content" id="content_brains">
+                    <h4>Banaan 5</h4>
+                    <p>
+                        uitleg banaan 5
+                    </p>
+                </div>
+            </div>
+
+
+
+
+        </div>
     </div>
 
     <footer>
@@ -172,7 +250,8 @@
 
                     <!-- Homepage: -->
                     <div class="row">
-                        <a class="footer-row-container more-links-row homepage-link active-link-page" href="../index.html">
+                        <a class="footer-row-container more-links-row homepage-link active-link-page"
+                            href="../index.html">
                             <div class="footer-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                     class="bi bi-house" viewBox="0 0 16 16">
@@ -206,7 +285,8 @@
 
                     <!-- Indiv. portfolio's: -->
                     <div class="row">
-                        <a class="footer-row-container more-links-row personal-portfolios-link" href="../portfolio's.html">
+                        <a class="footer-row-container more-links-row personal-portfolios-link active-link-page"
+                            href="../portfolio's.html">
                             <div class="footer-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                     class="bi bi-clipboard-data" viewBox="0 0 16 16" style="margin-top: -5px;">

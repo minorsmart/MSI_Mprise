@@ -72,11 +72,12 @@
 .dropdown-menu {
   width: 15.5rem;
   background-color: var(--bg-color);
+  padding: 0;
 }
 
 .dropdown-item-text {
   font-size: 1.1rem;
-  padding-left: .5rem;
+  padding-left: 0.5rem;
 }
 
 /* DROPDOWN PORTFOLIOS */
