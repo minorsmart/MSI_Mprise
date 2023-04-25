@@ -42,20 +42,10 @@
   color: var(--smart-connections-hover-color);
 }
 
-/* PROJECT: */
-.navbar_item_project {
-  border-left: 1px solid rgb(208, 208, 208);
-  border-right: 1px solid rgb(208, 208, 208);
-  color: var(--project-hover-color);
-}
-
-.navbar_item_project:hover {
-  color: var(--project-hover-color);
-}
-
 /* HOME: */
 .navbar_item_home {
   border-left: 1px solid rgb(208, 208, 208);
+  border-right: 1px solid rgb(208, 208, 208);
   color: var(--homepage-hover-color);
 }
 

@@ -1,11 +1,12 @@
-.introduction {
+.introduction_section {
+}
+
+.opdracht_section {
+  margin-top: 75px;
+}
+
+.section {
   background-color: rgb(243, 243, 243);
   border-radius: 20px;
   padding: 20px;
 }
-
-.opdracht {
-    background-color: rgb(243, 243, 243);
-    border-radius: 20px;
-    padding: 20px;
-  }
