@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/general_styling.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/navbar.css">
 </head>
@@ -29,7 +30,7 @@
             <ul class="navbar-nav mr-auto">
                 <!-- Homepage: -->
                 <li class="nav-item">
-                    <a class="navbar-item navbar_item_home active-navbar-page" href="index.html">
+                    <a class="navbar-item navbar_item_home" href="index.html">
                         <div class="navbar-item-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                 class="bi bi-house" viewBox="0 0 16 16">
@@ -45,7 +46,7 @@
 
                 <!-- Project: -->
                 <li class="nav-item">
-                    <a class="navbar-item navbar_item_project" href="project.html">
+                    <a class="navbar-item navbar_item_project active-navbar-page" href="project.html">
                         <div class="navbar-item-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                 class="bi bi-tencent-qq" viewBox="0 0 16 16">
@@ -141,7 +142,71 @@
     </nav>
 
     <div class="container">
-        <h1 class="page-title">Hoofdpagina</h1>
+        <div class="tncdsucbaisj col-lg-8 offset-lg-2">
+            <h1 class="page-title">Project</h1>
+
+            <div class="introduction">
+                <h2>Introductie</h2>
+                <div class="row" style="margin-top:50px;">
+                    <div class="col-lg-6">
+                        <h5>Projectgroep</h5>
+                        <p>Ons groepje bestaat uit Aaron, Kevin en Anthony.</p>
+                        <p>Alle drie studeren we HBO-ICT op de HAN. Aaron specialiseert zich in Software Development,
+                            terwijl Kevin en Anthony zich specialiseren in Embedded Software Development.</p>
+                    </div>
+
+                    <div class="col-lg-6 groepsafbeelding">
+                        <img class="img-fluid" src="images/mooi.jpg">
+                        <p class="caption">Groepsfoto Mprise (van links naar rechts: Aaron, Kevin en Anthony)</p>
+                    </div>
+                </div>
+
+
+                <div class="row" style="margin-top:50px;">
+                    <div class="col-lg-6">
+                        <h5>Bedrijf</h5>
+                        <p>Mprise Agriware focust zich vooral op de glastuinbouw. In deze sector maken zij software voor
+                            het beheren van de kassen. Dit wordt ook wel ERP (Enterprise Resource Planning) software
+                            genoemd.</p>
+                    </div>
+
+                    <div class="col-lg-6 mprise_gebouw">
+                        <img class="img-fluid" src="images/mprise_gebouw.jpg">
+                        <p class="caption">Mprise gebouw</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="opdracht" style="margin-top:100px;">
+                <h2>Opdracht</h2>
+    
+                <div class="dashboard" style="margin-top: 20px">
+                    <h5>Dashboard</h5>
+                    <p>Voor elke kas wordt er data verzameld. Door de data te visualiseren worden de KPI's inzichtelijker. Hierdoor is het makkelijk voor het management om besluiten te maken.</p>
+                    
+                    <p>De te ontwikkelen dashboards worden ontwikkeld in Power BI.</p>
+                    <img class="img-fluid col-10 offset-1 col-sm-12 offset-sm-0" src="images/dashboard.png">
+                </div>
+                
+                <div class="mixed_reality" style="margin-top: 50px;">
+                    <h5>Mixed Reality</h5>
+                    <p>De bovenstaande dashboards willen wij integreren in VR.</p>
+                    <p>Dit houdt in dat er doorgeklikt kan worden op het dashboard, waaruit uiteindelijk een kas van een bedrijf kan worden geopend in VR.</p>
+                    <img class="img-fluid col-10 offset-1 col-sm-12 offset-sm-0" src="images/cool3.gif">
+                </div>
+    
+    
+                <div class="haalbaarheid" style="margin-top: 50px;">
+                    <h5>Haalbaarheid</h5>
+                    <p>Op dit moment lijkt de Mixed Reality als prototype niet haalbaar.</p>
+                    <p>De geadviseerde software is nog te beperkt om er dashboards mee te visualiseren.</p>
+                    <br>
+                    <p>Echter is het wel mogelijk om door middel van een <a href="https://www.microsoft.com/en-us/hololens/buy">Hololens2</a> Power BI dashboards te visualiseren. Dit ziet er dan als volgt uit:</p>
+                    <img class="img-fluid col-10 offset-1 col-sm-12 offset-sm-0" src="images/cool2.gif">
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <footer>
@@ -172,7 +237,7 @@
 
                     <!-- Homepage: -->
                     <div class="row">
-                        <a class="footer-row-container more-links-row homepage-link active-link-page" href="index.html">
+                        <a class="footer-row-container more-links-row homepage-link" href="index.html">
                             <div class="footer-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                     class="bi bi-house" viewBox="0 0 16 16">
@@ -188,7 +253,8 @@
 
                     <!-- Project: -->
                     <div class="row">
-                        <a class="footer-row-container more-links-row project-link" href="project.html">
+                        <a class="footer-row-container more-links-row project-link active-link-page"
+                            href="project.html">
                             <div class="footer-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                     class="bi bi-tencent-qq" viewBox="0 0 16 16">
@@ -208,7 +274,7 @@
                     <div class="row">
                         <a class="footer-row-container more-links-row personal-portfolios-link" href="portfolio's.html">
                             <div class="footer-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
                                     class="bi bi-clipboard-data" viewBox="0 0 16 16" style="margin-top: -5px;">
                                     <path
                                         d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0V9z" />
