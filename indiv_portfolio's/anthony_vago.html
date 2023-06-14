@@ -94,7 +94,7 @@
                         <a class="dropdown-item active-navbar-page" href="anthony_vago.html">
                             <div class="row align-items-center">
                                 <div class="img-fluid">
-                                    <img src="../images/anthony_vago.png" alt="Anthony Vago" width="50" height="50">
+                                    <img src="../images/anthony_vago_navbar.png" alt="Anthony Vago" width="50" height="50">
                                 </div>
 
                                 <p class="dropdown-item-text">
@@ -125,7 +125,29 @@
     <div class="container">
         <h1 class="page-title">Portfolio van Anthony Vágó</h1>
 
-        <h3>Selecteer een onderwerp</h3>
+        <div class="row introduction_container">
+            <div class="col-md-3 introduction_section">
+                <div class="photo-container">
+                    <figure class="figure">
+                        <img src="../images/anthony_vago_cut.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                        <figcaption class="figure-caption">Figuur 1: Anthony Vágó.</figcaption>
+                      </figure>
+                    
+                </div>
+                    
+            </div>
+            <div class="col-md-7 introduction_section">
+                <div class="introduction">
+                    <p>Ik heb mijn portfolio opgedeeld in categorieën waarin ik mijn nieuwe verworven vaardigheden en kennis heb verwerkt.</p>
+                    <br>
+                    <p>U kunt ervan uitgaan dat de onderwerpen die hier niet worden genoemd, reeds over voldoende kennis beschikten.</p>
+                    <p>Eén voorbeeld hiervan is het uploaden van sensordata naar de cloud via een API.</p>
+                    <p>Tijdens mijn meewerkstage heb ik waardevolle kennis opgedaan in het gebruik van API's om data naar de cloud te verzenden.</p>
+                    <p>Het verkrijgen van data van sensoren vormt een essentieel onderdeel van mijn specialisatie, Embedded Software Development, gedurende mijn opleiding HBO-ICT.</p>
+                </div>
+            </div>
+        </div>        
+
 
         <script type="text/javascript">
             myNamespace = {
@@ -153,12 +175,20 @@
             }
 
             const IDs = [
-                ["content_competenties", "competenties_button"],
-                ["content_connection", "connection_button"],
-                ["content_technology", "technology_button"],
-                ["content_3d_printing", "printing_button"],
-                ["content_brains", "brains_button"]
+                ["content_competenties", "btn_competenties"],
+                ["content_bmc", "btn_bmc"],
+                ["content_tom", "btn_tom"],
+                ["content_business_case", "btn_business_case"],
+                ["content_3d_modeling", "btn_3d_modeling"],
+                ["content_pcb_design", "btn_pcb_design"]
             ];
+
+            function removeAllContent() {
+                for (var i = 0; i < IDs.length; i++) {
+                    var e = document.getElementById(IDs[i][0]);
+                    e.style.display = 'none';
+                }
+            }
 
             function undo_all_bold() {
                 for (var i = 0; i < IDs.length; i++) {
@@ -166,34 +196,48 @@
                 }
             }
 
+            function removeDefaultBackground() {
+                var e = document.getElementById("content_default");
+                e.style.display = 'none';
+            }
+
             function goToTabWithIndex(index) {
-                undo_all_bold();
-                show_content(IDs[index][0]);
-                make_bold(IDs[index][1]);
+                removeDefaultBackground(); // remove default background which says "select a subject"
+                removeAllContent(); // remove all the content from the screen
+                undo_all_bold(); // remove all the bold attributes from the buttons
+                make_bold(IDs[index][1]); // make the button bold of the selected subject
+                show_content(IDs[index][0]); // show the content of the selected subject
             }
         </script>
 
         <div class="knowledge_acquisition_container row">
             <div class="col-md-3 knowledge_acquisition_subject_list">
-                <a id="competenties_button" style="font-weight: bold;"
+                <a id="btn_competenties"
                     onclick="goToTabWithIndex(0);"
                     class="list-group-item">Competenties</a>
-                <a id="connection_button"
+                <a id="btn_bmc"
                     onclick="goToTabWithIndex(1);"
-                    class="list-group-item">Smart Connection</a>
-                <a id="technology_button"
+                    class="list-group-item">Business - BMC</a>
+                <a id="btn_tom"
                     onclick="goToTabWithIndex(2);"
-                    class="list-group-item">Smart Technology</a>
-                <a id="printing_button"
+                    class="list-group-item">Business - TOM</a>
+                <a id="btn_business_case"
                     onclick="goToTabWithIndex(3);"
-                    class="list-group-item">3D-printing</a>
-                <a id="brains_button"
+                    class="list-group-item">Business - Business case</a>
+                <a id="btn_3d_modeling"
                     onclick="goToTabWithIndex(4);"
-                    class="list-group-item">Het brein</a>
+                    class="list-group-item">IT - 3D modelleren</a>
+                <a id="btn_pcb_design"
+                    onclick="goToTabWithIndex(5);"
+                    class="list-group-item">IT - PCB ontwerpen</a>
             </div>
 
             <div class="col-md-9 content_container">
-                <div class="knowledge_acquisition_content" id="content_competenties">
+                <div class="knowledge_acquisition_content" id="content_default" style="margin-left: 0;">
+                    <p class="default_text">Selecteer een onderwerp aan de linkerkant</p>
+                </div>
+
+                <div class="knowledge_acquisition_content" id="content_competenties" style="display: none;">
                     <h4>Competenties</h4>
                     <p>Ik heb de competenties zo beschreven hoe ik dat op mijn opleiding heb geleerd.</p>
                     <p>Zelf vind ik dat ik deze competenties goed beheers en dat ik ze ook goed kan toepassen.</p>
@@ -251,31 +295,37 @@
                     </div>
                 </div>
 
-                <div class="knowledge_acquisition_content" id="content_connection">
-                    <h4>Banaan 2</h4>
+                <div class="knowledge_acquisition_content" id="content_bmc" style="display: none;">
+                    <h4>Business Model Canvas (BMC)</h4>
                     <p>
-                        uitleg banaan 2
+                        uitleg Business Model Canvas (BMC)
                     </p>
                 </div>
 
-                <div class="knowledge_acquisition_content" id="content_technology">
-                    <h4>Banaan 3</h4>
+                <div class="knowledge_acquisition_content" id="content_tom" style="display: none;">
+                    <h4>Target Operating Model (TOM)</h4>
                     <p>
-                        uitleg banaan 3
+                        uitleg Target Operating Model (TOM)
                     </p>
                 </div>
 
-                <div class="knowledge_acquisition_content" id="content_3d_printing">
-                    <h4>Banaan 4</h4>
+                <div class="knowledge_acquisition_content" id="content_business_case" style="display: none;">
+                    <h4>Business Case</h4>
                     <p>
-                        uitleg banaan 4
+                        uitleg Business Case
                     </p>
                 </div>
 
-                <div class="knowledge_acquisition_content" id="content_brains">
-                    <h4>Banaan 5</h4>
+                <div class="knowledge_acquisition_content" id="content_3d_modeling" style="display: none;">
+                    <h4>3D modelleren</h4>
                     <p>
-                        uitleg banaan 5
+                        uitleg 3D modelleren
+                    </p>
+                </div>
+                <div class="knowledge_acquisition_content" id="content_pcb_design" style="display: none;">
+                    <h4>PCB ontwerpen</h4>
+                    <p>
+                        uitleg PCB ontwerpen
                     </p>
                 </div>
             </div>
