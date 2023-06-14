@@ -1,10 +1,12 @@
 /* FOOTER */
 
 :root {
+  --homepage-color: rgb(3, 132, 201);
   --homepage-hover-color: rgb(3, 132, 201);
+  --project-color: rgb(218, 131, 31);
   --project-hover-color: rgb(218, 131, 31);
+  --personal-portfolios-color: rgb(143, 33, 202);
   --personal-portfolios-hover-color: rgb(143, 33, 202);
-  --smart-connections-hover-color: rgb(0, 135, 2);
 }
 
 footer {

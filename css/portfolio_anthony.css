@@ -1,17 +1,18 @@
 .knowledge_acquisition_container {
     background: red;
+    height: 1000px;
 }
 
 .knowledge_acquisition_subject_list {
     padding: 0;
     margin: 0;
     user-select: none;
+    font-size: 1.4em;
 }
 
 .knowledge_acquisition_subject_list:hover {
     cursor:pointer;
 }
-
 
 .content_container {
     background: darkslateblue;
@@ -24,6 +25,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    padding: 10px;
 }
 
 /* DEFAULT: To make content disappear when init page: */
@@ -46,3 +48,17 @@
 #content_brains {
     display: none;
 }
+
+.table-container {
+    margin-top: 2em;
+}
+
+.competentie_link {
+    color: #4298f4;
+    text-decoration: underline;
+}
+
+.competentie_link:hover {
+    cursor: pointer;
+}
+

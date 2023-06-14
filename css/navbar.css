@@ -22,38 +22,40 @@
   font-size: 13.5pt;
 }
 
-/* PORTFOLIOS: */
-.navbar_item_portfolios {
-  border-right: 1px solid rgb(208, 208, 208);
-  color: var(--personal-portfolios-hover-color);
-}
-
-.navbar_item_portfolios:hover {
-  color: var(--personal-portfolios-hover-color);
-}
-
-/* CONNECTIONS */
-.navbar_item_connections {
-  border-right: 1px solid rgb(208, 208, 208);
-  color: var(--smart-connections-hover-color);
-}
-
-.navbar_item_connections:hover {
-  color: var(--smart-connections-hover-color);
-}
-
 /* HOME: */
 .navbar_item_home {
   border-left: 1px solid rgb(208, 208, 208);
   border-right: 1px solid rgb(208, 208, 208);
-  color: var(--homepage-hover-color);
+  color: var(--homepage-color);
 }
 
 .navbar_item_home:hover {
   color: var(--homepage-hover-color);
 }
 
-/* CURRENT ACTYIVE NAVBAR: */
+/* PORTFOLIOS: */
+.navbar_item_portfolios {
+  border-right: 1px solid rgb(208, 208, 208);
+  color: var(--personal-portfolios-color);
+}
+
+.navbar_item_portfolios:hover {
+  color: var(--personal-portfolios-hover-color);
+}
+
+/* PROJECT */
+.navbar_item_project {
+  border-right: 1px solid rgb(208, 208, 208);
+  color: var(--project-color);
+}
+
+.navbar_item_project:hover {
+  color: var(--project-hover-color);
+}
+
+
+
+/* CURRENT ACTIVE NAVBAR: */
 .active-navbar-page {
   color: #000;
   background-color: rgba(150, 150, 150, 0.2);

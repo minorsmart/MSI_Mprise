@@ -105,7 +105,19 @@
                     </ul>
                 </li>
 
-                
+                <!-- Projectdocumentatie: -->
+                <li class="nav-item">
+                    <a class="navbar-item navbar_item_project" href="../project.html">
+                        <div class="navbar-item-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-binoculars" viewBox="0 0 16 16">
+                                <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882V2.5zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5h-1zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V4zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5V3zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5V14zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5V14z"/>
+                              </svg>
+                        </div>
+                        <div class="navbar-item-text">
+                            Projectdocumentatie
+                        </div>
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -120,7 +132,7 @@
                 index: 0
             };
 
-            function toggle_visibility(id) {
+            function show_content(id) {
                 var e = document.getElementById(id);
                 e.style.display = 'block';
 
@@ -129,28 +141,114 @@
                 e.style.zIndex = myNamespace.index;
                 console.log("Set z-index of element '" + id + "' to: " + myNamespace.index);
             }
+
+            function make_bold(buttonId) {
+                var e = document.getElementById(buttonId);
+                e.style.fontWeight = 'bold';
+            }
+
+            function undo_bold(buttonId) {
+                var e = document.getElementById(buttonId);
+                e.style.fontWeight = 'normal';
+            }
+
+            const IDs = [
+                ["content_competenties", "competenties_button"],
+                ["content_connection", "connection_button"],
+                ["content_technology", "technology_button"],
+                ["content_3d_printing", "printing_button"],
+                ["content_brains", "brains_button"]
+            ];
+
+            function undo_all_bold() {
+                for (var i = 0; i < IDs.length; i++) {
+                    undo_bold(IDs[i][1]);
+                }
+            }
+
+            function goToTabWithIndex(index) {
+                undo_all_bold();
+                show_content(IDs[index][0]);
+                make_bold(IDs[index][1]);
+            }
         </script>
 
         <div class="knowledge_acquisition_container row">
-            <div class="col-md-4 knowledge_acquisition_subject_list">
-                <a id="business_button" onclick="toggle_visibility('content_business');" class="list-group-item">Smart
-                    Business</a>
-                <a id="connection_button" onclick="toggle_visibility('content_connection');"
+            <div class="col-md-3 knowledge_acquisition_subject_list">
+                <a id="competenties_button" style="font-weight: bold;"
+                    onclick="goToTabWithIndex(0);"
+                    class="list-group-item">Competenties</a>
+                <a id="connection_button"
+                    onclick="goToTabWithIndex(1);"
                     class="list-group-item">Smart Connection</a>
-                <a id="technology_button" onclick="toggle_visibility('content_technology');"
+                <a id="technology_button"
+                    onclick="goToTabWithIndex(2);"
                     class="list-group-item">Smart Technology</a>
-                <a id="printing_button" onclick="toggle_visibility('content_3d_printing');"
+                <a id="printing_button"
+                    onclick="goToTabWithIndex(3);"
                     class="list-group-item">3D-printing</a>
-                <a id="brains_button" onclick="toggle_visibility('content_brains');" class="list-group-item">Het
-                    brein</a>
+                <a id="brains_button"
+                    onclick="goToTabWithIndex(4);"
+                    class="list-group-item">Het brein</a>
             </div>
 
-            <div class="col-md-8 content_container">
-                <div class="knowledge_acquisition_content" id="content_business">
-                    <h4>Banaan 1</h4>
-                    <p>
-                        uitleg banaan 1
-                    </p>
+            <div class="col-md-9 content_container">
+                <div class="knowledge_acquisition_content" id="content_competenties">
+                    <h4>Competenties</h4>
+                    <p>Ik heb de competenties zo beschreven hoe ik dat op mijn opleiding heb geleerd.</p>
+                    <p>Zelf vind ik dat ik deze competenties goed beheers en dat ik ze ook goed kan toepassen.</p>
+                    
+                    <div class="table-responsive table-container">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Competentie beschrijving</th>
+                                    <th>Link naar product</th>
+                                    <th>Beschrijving eigen bijdrage</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>Je toont veel initiatief en betrokkenheid.</td>
+                                    <td>
+                                        <a onclick="goToTabWithIndex(1);"><p class="competentie_link">Smart connection,</p></a>
+                                        <a onclick="goToTabWithIndex(2);"><p class="competentie_link">SmartTech,</p></a>
+                                        <a onclick="goToTabWithIndex(3);"><p class="competentie_link">3D,</p></a>
+                                        <a onclick="goToTabWithIndex(4);"><p class="competentie_link">Brein,</p></a>
+                                    </td>
+                                    <td>x</td>
+                                </tr>
+                                <tr>
+                                    <td>Je meningen of adviezen zijn gebaseerd op gedegen onderzoek.</td>
+                                    <td>y</td>
+                                    <td>y</td>
+                                </tr>
+                                <tr>
+                                    <td>Je kiest amitieuze leerdoelen en verkent disciplines buiten je eigen vakgebied.
+                                    </td>
+                                    <td>z</td>
+                                    <td>z</td>
+                                </tr>
+                                <tr>
+                                    <td>Je bent bewust bezig met je persoonlijke groei.</td>
+                                    <td>p</td>
+                                    <td>p</td>
+                                </tr>
+                                <tr>
+                                    <td>Je gebruikt feedback en zelfreflectie om te leren.</td>
+                                    <td>q</td>
+                                    <td>q</td>
+                                </tr>
+                                <tr>
+                                    <td>Je helpt actief anderen groeien.</td>
+                                    <td>a</td>
+                                    <td>a</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
                 <div class="knowledge_acquisition_content" id="content_connection">
@@ -212,7 +310,7 @@
 
                     <!-- Homepage: -->
                     <div class="row ">
-                        <a class="footer-row-container more-links-row homepage-link active-link-page" href="index.html">
+                        <a class="footer-row-container more-links-row homepage-link" href="../index.html">
                             <div class="footer-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                     class="bi bi-house" viewBox="0 0 16 16">
@@ -228,7 +326,7 @@
 
                     <!-- Indiv. portfolio's: -->
                     <div class="row">
-                        <a class="footer-row-container more-links-row personal-portfolios-link" href="portfolio's.html">
+                        <a class="footer-row-container more-links-row personal-portfolios-link active-link-page" href="../portfolio's.html">
                             <div class="footer-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
                                     class="bi bi-clipboard-data" viewBox="0 0 16 16" style="margin-top: -5px;">
@@ -242,6 +340,22 @@
                             </div>
                             <div class="footer-text">
                                 Individuele portfolio's
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Projectdocumentatie: -->
+                    <div class="row">
+                        <a class="footer-row-container more-links-row project-link" href="../project.html">
+                            <div class="footer-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                    class="bi bi-binoculars" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882V2.5zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5h-1zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V4zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5V3zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5V14zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5V14z" />
+                                </svg>
+                            </div>
+                            <div class="footer-text">
+                                Projectdocumentatie
                             </div>
                         </a>
                     </div>
@@ -304,7 +418,7 @@
                         </a>
                     </div>
 
-                    
+
                 </div>
             </div>
 
