@@ -129,10 +129,9 @@
             <div class="col-md-3 introduction_section">
                 <div class="photo-container">
                     <figure class="figure">
-                        <img src="../images/anthony/anthony_vago_cut.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                        <img src="../images/anthony/anthony_vago_cut.png" class="figure-img img-fluid rounded" alt="Anthony Vago">
                         <figcaption class="figure-caption">Figuur 1: Anthony Vágó.</figcaption>
-                      </figure>
-                    
+                    </figure>
                 </div>
                     
             </div>
@@ -356,40 +355,47 @@
                 </div>
 
                 <div class="knowledge_acquisition_content" id="content_bmc" style="display: none;">
-                    <h4>Business Model Canvas (BMC)</h4>
-                    <p>
-                        uitleg Business Model Canvas (BMC)
-                    </p>
+                    <h4>Business Model Canvas (BMC) van Mprise</h4>
+                    
+                    <figure class="figure">
+                        <img src="../images/anthony/BMC Mprise.png" class="figure-img img-fluid rounded" alt="Business Model Canvas Mprise">
+                        <figcaption class="figure-caption">Figuur 2: Business Model Canvas.</figcaption>
+                    </figure>
                 </div>
 
                 <div class="knowledge_acquisition_content" id="content_tom" style="display: none;">
-                    <h4>Target Operating Model (TOM)</h4>
-                    <p>
-                        uitleg Target Operating Model (TOM)
-                    </p>
-                </div>
-
-                <div class="knowledge_acquisition_content" id="content_business_case" style="display: none;">
-                    <h4>Business Case</h4>
-                    <p>
-                        uitleg Business Case
-                    </p>
+                    <h4>Target Operating Model (TOM) van een planningsdashboard bij Mprise</h4>
+                    
+                    <figure class="figure">
+                        <img src="../images/anthony/TOM.png" class="figure-img img-fluid rounded" alt="Target Operating Model van een planningsdashboard bij Mprise">
+                        <figcaption class="figure-caption">Figuur 3: Target Operating Model van een planningsdashboard bij Mprise.</figcaption>
+                    </figure>
                 </div>
 
                 <div class="knowledge_acquisition_content" id="content_3d_modeling" style="display: none;">
                     <h4>3D modelleren</h4>
-                    <p>
-                        uitleg 3D modelleren
-                    </p>
+                    
+                    <figure class="figure">
+                        <img src="../images/anthony/3D.png" class="figure-img img-fluid rounded" alt="3D ontwerp bakje">
+                        <figcaption class="figure-caption">Figuur 4: Mijn 3D-model in SolidWorks.</figcaption>
+                    </figure>
                 </div>
                 <div class="knowledge_acquisition_content" id="content_pcb_design" style="display: none;">
                     <h4>PCB ontwerpen</h4>
-                    <p>
-                        uitleg PCB ontwerpen
-                    </p>
+                    
+                    <figure class="figure">
+                        <img src="../images/anthony/PCB.png" class="figure-img img-fluid rounded" alt="PCB ontwerp">
+                        <figcaption class="figure-caption">Figuur 5: Ontwerp van het PCB in Eagle.</figcaption>
+                    </figure>
                 </div>
 
                 <script>
+                    const noteIDs = [
+                        "note_1",
+                        "note_2",
+                        "note_3"
+                    ];
+
                     const sunIDs = [
                         "note_1_dot",
                         "note_2_dot",
@@ -408,9 +414,25 @@
                         }
                     }
 
+                    function removeAllBoldness() {
+                        for (var i = 0; i < sunIDs.length; i++) {
+                            document.getElementById(noteIDs[i]).style.fontWeight = "normal";
+                        }
+                    }
+
+                    function setAllDecoratianToUnderline() {
+                        for (var i = 0; i < noteIDs.length; i++) {
+                            document.getElementById(noteIDs[i]).style.textDecorationLine = "underline";
+                        }
+                    }
+
                     function switchSource(index) {
                         removeAllSuns();
+                        removeAllBoldness();
+                        setAllDecoratianToUnderline();
                         document.getElementById(sunIDs[index]).style.color = "#FFD700";
+                        document.getElementById(noteIDs[index]).style.fontWeight = "bold";
+                        document.getElementById(noteIDs[index]).style.textDecorationLine = "none";
 
                         var iFrame = document.getElementById("frame_notulen");
                         iFrame.src = notePaths[index];
@@ -429,7 +451,7 @@
                             </svg>
                         </div>
 
-                        <p id="note_1" class="competentie_link" style="font-weight: bold;"><a onclick="switchSource(0)">Notulen Kennmismaking Aryzon</a></p>
+                        <p id="note_1" class="note_link competentie_link" style="font-weight: bold; text-decoration: none;"><a onclick="switchSource(0)">Notulen Kennmismaking Aryzon</a></p>
                     </div>
 
                     <div class="row pdf_container">
@@ -439,7 +461,7 @@
                             </svg>
                         </div>
 
-                        <p id="note_2" class="competentie_link" style="font-weight: bold;"><a onclick="switchSource(1)">Notulen Kennismaking Mprise data-analisten</a></p>
+                        <p id="note_2" class="note_link competentie_link"><a onclick="switchSource(1)">Notulen Kennismaking Mprise data-analisten</a></p>
                     </div>
 
                     <div class="row pdf_container">
@@ -449,7 +471,7 @@
                             </svg>
                         </div>
 
-                        <p id="note_3" class="competentie_link" style="font-weight: bold;"><a onclick="switchSource(2)">Notulen Kennmismaking Mprise consultant</a></p>
+                        <p id="note_3" class="note_link competentie_link"><a onclick="switchSource(2)">Notulen Kennmismaking Mprise consultant</a></p>
                     </div>
 
                     <iframe src="../assets/anthony/notulen/Notulen Kennismaking Aryzon.pdf" id="frame_notulen" style="width:100%; height:900px; margin-top:25px;" frameborder="0"></iframe>
