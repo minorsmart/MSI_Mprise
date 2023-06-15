@@ -11,7 +11,12 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
-
+.boxpara{
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
 @media (prefers-reduced-motion: no-preference) {
 .initialism {
   font-size: 0.875em;
