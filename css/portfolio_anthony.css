@@ -8,7 +8,6 @@
 }
 .knowledge_acquisition_container {
     /* background: red; */
-    height: 2500px;
     margin-top: 2em;
 }
 
@@ -19,8 +18,8 @@
     font-size: 1.2em;
 }
 
-.knowledge_acquisition_subject_list:hover {
-    cursor:pointer;
+.my_btn:hover {
+    cursor: pointer;
 }
 
 .content_container {
@@ -36,8 +35,14 @@
     padding: 10px;
 }
 
+.table {
+    height: 100%;
+}
+
 .table-container {
     margin-top: 2em;
+    overflow: auto;
+    max-height: 900px;
 }
 
 .default_text {
@@ -63,6 +68,11 @@ hr {
 
 .notulen_list_container {
     margin-top: 2em;
+    /* color: #234bfc; */
+}
+
+.pdf_container {
+    margin-top: 3px;
     /* color: #234bfc; */
 }
 
