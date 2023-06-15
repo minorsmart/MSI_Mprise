@@ -8,7 +8,7 @@
 }
 .knowledge_acquisition_container {
     /* background: red; */
-    height: 1000px;
+    height: 2500px;
     margin-top: 2em;
 }
 
@@ -54,5 +54,15 @@
 
 .competentie_link:hover {
     cursor: pointer;
+}
+
+hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.notulen_list_container {
+    margin-top: 2em;
+    /* color: #234bfc; */
 }
 

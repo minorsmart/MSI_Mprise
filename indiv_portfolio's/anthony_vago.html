@@ -180,7 +180,9 @@
                 ["content_tom", "btn_tom"],
                 ["content_business_case", "btn_business_case"],
                 ["content_3d_modeling", "btn_3d_modeling"],
-                ["content_pcb_design", "btn_pcb_design"]
+                ["content_pcb_design", "btn_pcb_design"],
+                ["content_notes", "btn_notes"],
+                ["content_project_situations", "btn_project_situations"]
             ];
 
             function removeAllContent() {
@@ -196,13 +198,7 @@
                 }
             }
 
-            function removeDefaultBackground() {
-                var e = document.getElementById("content_default");
-                e.style.display = 'none';
-            }
-
             function goToTabWithIndex(index) {
-                removeDefaultBackground(); // remove default background which says "select a subject"
                 removeAllContent(); // remove all the content from the screen
                 undo_all_bold(); // remove all the bold attributes from the buttons
                 make_bold(IDs[index][1]); // make the button bold of the selected subject
@@ -211,8 +207,8 @@
         </script>
 
         <div class="knowledge_acquisition_container row">
-            <div class="col-md-3 knowledge_acquisition_subject_list">
-                <a id="btn_competenties"
+            <div class="col-md-4 knowledge_acquisition_subject_list">
+                <a id="btn_competenties" style="font-weight: bold;"
                     onclick="goToTabWithIndex(0);"
                     class="list-group-item">Competenties</a>
                 <a id="btn_bmc"
@@ -230,14 +226,16 @@
                 <a id="btn_pcb_design"
                     onclick="goToTabWithIndex(5);"
                     class="list-group-item">IT - PCB ontwerpen</a>
+                <a id="btn_notes"
+                    onclick="goToTabWithIndex(6);"
+                    class="list-group-item">Project - Notulen</a>
+                <a id="btn_project_situations"
+                    onclick="goToTabWithIndex(7);"
+                    class="list-group-item">Project - Situatiebeschrijvingen</a>
             </div>
 
-            <div class="col-md-9 content_container">
-                <div class="knowledge_acquisition_content" id="content_default" style="margin-left: 0;">
-                    <p class="default_text">Selecteer een onderwerp aan de linkerkant</p>
-                </div>
-
-                <div class="knowledge_acquisition_content" id="content_competenties" style="display: none;">
+            <div class="col-md-8 content_container">
+                <div class="knowledge_acquisition_content" id="content_competenties">
                     <h4>Competenties</h4>
                     <p>Ik heb de competenties zo beschreven hoe ik dat op mijn opleiding heb geleerd.</p>
                     <p>Zelf vind ik dat ik deze competenties goed beheers en dat ik ze ook goed kan toepassen.</p>
@@ -248,7 +246,7 @@
                                 <tr>
                                     <th>Competentie beschrijving</th>
                                     <th>Link naar product</th>
-                                    <th>Beschrijving eigen bijdrage</th>
+                                    <th>Toelichting eigen bijdrage</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -257,38 +255,111 @@
                                 <tr>
                                     <td>Je toont veel initiatief en betrokkenheid.</td>
                                     <td>
-                                        <a onclick="goToTabWithIndex(1);"><p class="competentie_link">Smart connection,</p></a>
-                                        <a onclick="goToTabWithIndex(2);"><p class="competentie_link">SmartTech,</p></a>
-                                        <a onclick="goToTabWithIndex(3);"><p class="competentie_link">3D,</p></a>
-                                        <a onclick="goToTabWithIndex(4);"><p class="competentie_link">Brein,</p></a>
+                                        <p>1. <a onclick="goToTabWithIndex(6);" href="#">Notulen</a></p>
+                                        <hr>
+                                        <p>2. Zie hier rechts (<i>Toelichting eigen bijdrage</i>)</p>
+                                        <hr>
+                                        <p>3. <a href="../project.html" class="competentie_link">Projectdocumentatie H7.2 Power BI met SYNOPTICS en DAX</a></p>
                                     </td>
-                                    <td>x</td>
+                                    <td>
+                                        <p>1. Ik heb weliswaar nooit zelf genotuleerd, maar ik vind wel dat ik altijd heel aanwezig ben geweest in alle vergaderingen die we hebben gehad. Dit komt doordat ik mijzelf de 'prater' vind van de groep.<br>Ook vind ik dat ik een rol aannam in dit project waarbij ik heel positief was. Achteraf was dat maar goed ook, zeker toen we beseften dat VR het niet meer ging worden waardoor we, of verdrietig konden zijn, of iets nieuws konden bedenken.</p>
+                                        <hr>
+                                        <p>2. Tijdens het project hadden we regelmatige vergaderingen waar alle teamleden aanwezig waren. We maakten gebruik van een chat op het Teams-platform in de Mprise-omgeving om constant met elkaar te communiceren en alles te overleggen. Ik was altijd actief betrokken bij deze communicatie.</p>
+                                        <hr>
+                                        <p>3. Ik heb de DAX-formule bedacht die het planningsdashboard mogelijk maakte. Ook heb ik een groot bijdrage in het maken van de visuals op het dashboard.</p>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Je meningen of adviezen zijn gebaseerd op gedegen onderzoek.</td>
-                                    <td>y</td>
-                                    <td>y</td>
+                                    <td>
+                                        <p>1. <a href="../project.html" class="competentie_link">Projectdocumentatie H5: Welke bedrijfseigenschappen zijn er binnen de glastuinbouwsector?</a></p>
+                                        <hr>
+                                        <p>2. <a href="../project.html" class="competentie_link">Projectdocumentatie H6: Digitalisation level Glastuinbouwsector</a></p>
+                                        <hr>
+                                        <p>3. <a href="../project.html" class="competentie_link">Projectdocumentatie H7.1: Toepasbaarheid Aryzon</a></p>
+                                        <hr>
+                                        <p>4. <a href="../project.html" class="competentie_link">Projectdocumentatie H7.2: Power BI met SYNOPTICS en DAX</a></p>
+                                    </td>
+                                    <td>
+                                        <p>1. Wij hebben samen als groep onderzocht welke belangrijke productieprocessen en besturingsniveaus er zijn binnen de (glas)tuinbouwsector. Hiervoor is voornamelijk literature study gebruikt als onderzoeksmethode.</p>
+                                        <hr>
+                                        <p>2. Wij hebben samen als groep onderzocht op welke digitalisatielevel de tuinbouwsector zich bevindt. Hierdoor konden we concluderen dat ons dashboard een uitstekend product is aangezien dit product het digitalisatielevel omhoog helpt van <i>Monitoring</i> naar <i>Understanding</i>. Hiervoor is voornamelijk literature study gebruikt als onderzoeksmethode.</p>
+                                        <hr>
+                                        <p>3. Ik heb onderzoek uitgevoerd middels usability testing of Aryzon's framework voldeed aan onze benodigde functionaliteiten.</p>
+                                        <hr>
+                                        <p>4. Ik heb onderzoek uitgevoerd middels literature study hoe formules (DAX-taal) in Power BI (programma om dashboards te creëren) werken en deze toegepast.</p>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>Je kiest amitieuze leerdoelen en verkent disciplines buiten je eigen vakgebied.
+                                    <td>Je kiest amitieuze leerdoelen en verkent disciplines buiten je eigen vakgebied.</td>
+                                    <td>
+                                        <p>1. <a onclick="goToTabWithIndex(1);" href="#">Business Model Canvas</a></p>
+                                        <hr>
+                                        <p>2. <a onclick="goToTabWithIndex(2);" href="#">Target Operating Model</a></p>
+                                        <hr>
+                                        <p>3. <a onclick="goToTabWithIndex(3);" href="#">Business Case</a></p>
+                                        <hr>
+                                        <p>4. <a onclick="goToTabWithIndex(4);" href="#">3D modelleren</a></p>
+                                        <hr>
+                                        <p>5. <a onclick="goToTabWithIndex(5);" href="#">PCB ontwerpen</a></p>
                                     </td>
-                                    <td>z</td>
-                                    <td>z</td>
+                                    <td>
+                                        <p>1. Ik heb geleerd hoe ik een Business Model Canvas moet maken en in welke volgorde dit proces verloopt. Zowel interne- als externe factoren worden meegenomen om, in ons geval Mprise, in kaart te brengen. Hierdoor heb ik een discipline buiten mijn vakgebied verkend die wellicht in de toekomst nog handig kan zijn. Ook valt deze discipline in mijn leerdoel om meer van het business kant te leren.</p>
+                                        <hr>
+                                        <p>2. Ik heb geleerd hoe ik een Target Operating Model moet maken waaruit de impact van een innovatie is te bepalen op alle bedrijfsniveaus. Hierdoor heb ik een discipline buiten mijn vakgebied verkend die wellicht in de toekomst nog handig kan zijn. Ook valt deze discipline in mijn leerdoel om meer van het business kant te leren.</p>
+                                        <hr>
+                                        <p>3. Ik heb geleerd hoe ik een Business Case opstel. Dit is wellicht in mijn toekomst handig voor als ik mijn innovatie ga presenteren. Hierdoor heb ik een discipline buiten mijn vakgebied verkend die wellicht in de toekomst nog handig kan zijn. Ook valt deze discipline in mijn leerdoel om meer van het business kant te leren.</p>
+                                        <hr>
+                                        <p>4. Ik heb geleerd hoe ik in Solidworks een 3D model ontwerp die ook nog eens uitgeprint kan worden. Dit heb ik nog nooit eerder gedaan, maar het leek me wel altijd vet om te doen. Hierdoor heb ik een discipline buiten mijn vakgebied verkend.</p>
+                                        <hr>
+                                        <p>5. Ik heb geleerd hoe ik een PCB ontwerp in Eagle. In mijn vakgebied spelen PCB's een grote rol aangezien dit de basis is van alle microcontrollers waar ik software voor schrijf. Het ontwerpen van PCB's valt net niet in mijn vakgebied waardoor ik een discipline heb verkend net buiten mijn vakgebied.</p>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Je bent bewust bezig met je persoonlijke groei.</td>
-                                    <td>p</td>
-                                    <td>p</td>
+                                    <td>
+                                        <p>1. Minder verlegen</p>
+                                        <p>(zie toelichting hier rechts)</p>
+                                    </td>
+                                    <td>
+                                        <p>1. Ik merk van mezelf dat ik minder verlegen ben geworden gedurende deze minor. Voor deze minor was ik best verlegen als het aankomt op praten met anderen en presenteren voor de klas. Maar in dit groepje ging mijn verlegenheid snel weg; vanaf het begin ging presenteren voor de klas me goed af en communiceren met Kevin en Aaron ging ook vlekkeloos met vaker een lachpartij tussendoor. Of dit door de minor komt of doordat ik mentaal steeds volwassener word is voor mij ook een mysterie.</p>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Je gebruikt feedback en zelfreflectie om te leren.</td>
-                                    <td>q</td>
-                                    <td>q</td>
+                                    <td>
+                                        <p>1. Feedbackmomenten documentatie</p>
+                                        <p>(zie toelichting hier rechts)</p>
+                                        <hr>
+                                        <p>2. Feedbackmoment op school met formulier</p>
+                                        <p>(zie toelichting hier rechts)</p>
+                                    </td>
+                                    <td>
+                                        <p>1. Gedurende het opstellen van alle documentatie hebben we alle drie elkaar gecorrigeerd op typfouten, grammaticafouten en zinnen die beter geformuleerd konden worden. Hierdoor heb ik toch weer een stukje extra's van mijn eigen taal geleerd.</p>
+                                        <hr>
+                                        <p>2. Vanuit school kregen we de opdracht om elkaar feedback te geven middels een feedbackformulier. Vervolgens hebben we op school deze feedback aan elkaar gegeven. Hier kwam uit dat ik altijd heel vrolijk en positief was, wat in dit geval als positieve punten werden gezien, door Aaron en Kevin. Daar was ik heel blij mee aangezien ik dacht dat het soms té was en het juist soms vervelend werd, wat dus niet zo was. In toekomstige projecten wil ik deze rol gaan volhouden.</p>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Je helpt actief anderen groeien.</td>
-                                    <td>a</td>
-                                    <td>a</td>
+                                    <td>
+                                        <p>1. Feedbackmoment op school met formulier</p>
+                                        <p>(zie toelichting hier rechts)</p>
+                                        <hr>
+                                        <p>2. Feedbackmomenten documentatie</p>
+                                        <p>(zie toelichting hier rechts)</p>
+                                        <hr>
+                                        <p>3. Positiviteit</p>
+                                        <p>(zie toelichting hier rechts)</p>
+                                        <hr>
+                                    </td>
+                                    <td>
+                                        <p>Ik heb het feedbackformulier, die we vanuit school hebben gekregen, in zijn volledigheid ingevuld om zo mijn </p>
+                                        <hr>
+                                        <p></p>
+                                        <hr>
+                                        <p></p>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -328,6 +399,38 @@
                         uitleg PCB ontwerpen
                     </p>
                 </div>
+
+                <script>
+                    const notePaths = [
+                        "../assets/anthony/notulen/Notulen Kennismaking Aryzon.pdf",
+                        "../assets/anthony/notulen/Notulen kennismaking Mprise data-analisten.pdf",
+                        "../assets/anthony/notulen/Notulen online meeting Mprise consultant.pdf"
+                    ];
+
+                    function switchSource(index) {
+                        var iFrame = document.getElementById("frame_notulen");
+                        iFrame.src = notePaths[index];
+                    }
+                </script>
+
+                <div class="knowledge_acquisition_content" id="content_notes" style="display: none;">
+                    <h4>Notulen</h4>
+                    <p>Hieronder zijn de notulen te raadplegen van een aantal vergaderingen waar ik een significante bijdrage heb geleverd.</p>                  
+                    
+                    <div class="notulen_list_container">
+                        <p class="competentie_link"><a onclick="switchSource(0)">Notulen Kennmismaking Aryzon</a></p>
+                        <p class="competentie_link"><a onclick="switchSource(1)">Notulen Kennismaking Mprise data-analisten</a></p>
+                        <p class="competentie_link"><a onclick="switchSource(2)">Notulen Kennmismaking Mprise consultant</a></p>
+                    </div>
+
+                    <iframe id="frame_notulen" style="width:100%; height:900px; margin-top:25px;" frameborder="0"></iframe>
+                </div>
+
+                <div class="knowledge_acquisition_content" id="content_project_situations" style="display: none;">
+                    <h4>Situatiebeschrijvingen projectfase</h4>
+                </div>
+
+                
             </div>
         </div>
     </div>
