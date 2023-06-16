@@ -1,0 +1,127 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F8F8F8;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .container_journal{
+    max-width: 60%;
+    margin: 20px auto;
+    margin-right: 0px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  .container-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 90%;
+    max-height: 50%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .left-container {
+    flex-basis: 30%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    height:500px;
+    position:sticky;
+    top:10%;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left-container img{
+    width:100%;
+    height:auto;
+  }
+
+  .right-container {
+    flex-basis: 65%;
+    background-color: #fff;
+    margin-right:20px auto;
+    max-width:60%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .entry {
+    margin-bottom: 30px;
+  }
+
+  .entry h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    cursor: pointer;
+  }
+
+  .entry p {
+    margin-top: 5px;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  .date {
+    color: #888;
+    font-style: italic;
+  }
+
+  .p_entry{
+    
+    margin-bottom:30px;;
+  }
+
+  .content {
+    display: none;
+    padding-top: 10px;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .page-title{
+    margin-left:50px;
+  }
+
+  .entry {
+    margin-bottom: 20px;
+  }
+
+  .entry .content {
+    display: none;
+    padding-left: 20px;
+  }
+  
+
+  
+  .entry .entry {
+    margin-bottom: 10px;
+  }
+  
+  .entry .entry .content {
+    padding-left: 40px;
+  }

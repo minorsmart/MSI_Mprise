@@ -14,6 +14,73 @@
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/portfolio_aaron.css">
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+            var leftContainer = document.querySelector('.left-container');
+            
+            toggleImage(id);
+
+            if(id.match('entry_aaron*')){
+                toggleImage('entry_aaron');
+            }
+
+        }
+
+        function toggleImage(id) {
+            var leftContainer = document.querySelector('.left-container');
+            var image = document.getElementById('entryImage');
+            console.log(id);
+
+            switch(id){
+                case'entry_aaron':
+                image.src = '../images/aaron/aaron.jpg';
+                break;
+                case 'BMC':
+                image.src = '../images/anthony/BMC Mprise.png';
+                break;
+                case 'TOM':
+                image.src='../images/anthony/TOM.png';
+                break;
+                case 'entry1':
+                image.src='../images/aaron/mprise.jpg'    ;
+                break;
+                case 'entry2':
+                image.src='../images/aaron/digitaltwin.png';
+                break;
+                case 'entry3':
+                image.src='../images/aaron/vr.png';
+                break;
+                case 'entry4':
+                image.src='../images/aaron/competenties.png';
+                break;
+                case 'entry5':
+                image.src='../images/aaron/competenties.png';
+                break;
+                case 'entry6':
+                image.src='../images/dashboard.png';
+                break;
+                case 'entry_competenties':
+                image.src='../images/aaron/competenties.png';
+                break;
+                default:
+                    image.src='../images/msi logo photoshop.png';
+            }
+
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            startContent('entry_aaron');
+            startContent('entry_competenties');
+            toggleImage('');
+        });
+
+        function startContent(id){
+            var entry = document.getElementById(id);
+            toggleContent(entry.id);
+        }
+    </script>
 </head>
 
 <body>
@@ -93,7 +160,8 @@
                         <a class="dropdown-item" href="anthony_vago.html">
                             <div class="row align-items-center">
                                 <div class="img-fluid">
-                                    <img src="../images/anthony/anthony_vago_navbar.png" alt="Anthony Vago" width="50" height="50">
+                                    <img src="../images/anthony/anthony_vago_navbar.png" alt="Anthony Vago" width="50"
+                                        height="50">
                                 </div>
 
                                 <p class="dropdown-item-text">
@@ -123,8 +191,193 @@
         </div>
     </nav>
 
-    <div class="container">
-        <h1 class="page-title">Portfolio van Aaron Thunnissen</h1>
+
+    <h1 class="page-title">Portfolio van Aaron Thunnissen</h1>
+    <div class="container-wrapper">
+        <div class="left-container">
+            <img class='left-container-image' id="entryImage" src="../images/msi logo photoshop.png">
+        </div>
+        <div class="right-container">
+            <div class="entry">
+                <h2 onclick="toggleContent('entry_aaron')">Aaron Thunnissen</h2>
+                <div id="entry_aaron" class="content">
+                    <div class="entry">
+                        <h2 class="date" onclick="toggleContent('entry_aaron-1')">Wie ben ik?</h2>
+                        <div id="entry_aaron-1" class="content">
+                            <p class="p_entry">Mijn naam is Aaron Thunnissen, ik ben 26 jaar oud en woon in Arnhem. Op
+                                dit ben ik in het vierde jaar van mijn studie HBO-ICT, profiel Software Development aan
+                                de Hogeschool van Arnhem en Nijmegen.</p>
+                        </div>
+                        <h2 class="date" onclick="toggleContent('entry_aaron-2')">Waarom Smart Industry?</h2>
+                        <div id="entry_aaron-2" class="content">
+                            <p class="p_entry">Tijdens mijn studie heb ik niets geleerd over bedrijfskunde, terwijl ik
+                                dit wel interessant vind. Smart Industry maakt het mogelijk voor mij om in korte tijd op
+                                een begrijpelijke manier over bedrijfskunde te leren. Daarnaast lijkt het mij erg leuk
+                                om een bedrijf te helpen met innoveren.</p>
+                        </div>
+                        <h2 class="date" onclick="toggleContent('entry_aaron-3')">Wat zijn mijn leerdoelen?</h2>
+                        <div id="entry_aaron-3" class="content">
+
+                            <ul>
+                                <li>Tijdens deze minor wil ik graag leren over bedrijfsprocessen. Dit wil ik doen door
+                                    analyses van bedrijven uit te voeren. </li>
+                                <li>Ook wil ik graag leren over AI, aangezien dit steeds groter wordt.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- COMPETENTIES -->
+            <div class="entry">
+                <h2 onclick="toggleContent('entry_competenties')">Competenties</h2>
+                <div id="entry_competenties" class="content">
+                    <!-- COMPETENTIE 1 -->
+                    <h2 onclick="toggleContent('entry1')">Je toont veel initiatief en betrokkenheid.</h2>
+                    <div id="entry1" class="content">
+                        <h5 class="date">Notuleren</h5>
+                        <p class="p_entry">Gedurende het project heb ik vrijwel alle gesprekken met de opdrachtgever,
+                            data-analisten, consultants en docenten genotuleerd. Dit heb ik gedaan door zelf aan te
+                            geven dat ik dit graag doe, omdat ik hiermee heel actief met het gesprek bezig ben. </p>
+                        <h5 class="date">Prototype</h5>
+                        <p class="p_entry">Aan het einde van het project ben ik, na advies van Marielle bezig gegaan met
+                            een verrassing voor de opdrachtgever. Hiervoor ben ik op onderzoek uit gegaan naar wijzes om
+                            een digital twin te maken van een kas, zonder gebruik van VR. Dit heeft geleid tot een
+                            prototype waarmee de opdrachtgever erg blij is.</p>
+                        <h5 class="date">Betrokkenheid in team</h5>
+                        <p class="p_entry">Gedurende het project zijn wij constant met z’n drieeen aan het werk geweest.
+                            Dit is zowel via Teams als op locatie geweest. Hierbij waren wij alledrie erg betrokken bij
+                            de opdracht en het project.</p>
+                    </div>
+                    <!-- COMPETENTIE 2 -->
+                    <h2 onclick="toggleContent('entry2')">Je meningen of adviezen zijn gebaseerd op gedegen onderzoek.
+                    </h2>
+                    <div id="entry2" class="content">
+                        <h5 class="date">Onderzoek Digital Twin</h5>
+                        <p class="p_entry">Tijdens het project viel de term Digital Twin erg vaak. Echter, ik wist wat
+                            het betekende maar ik wist er naar mijn idee niet genoeg over. Tijdens het project heb ik
+                            onderzocht wat een digital twin is, welke verschillende vormen ervan zijn en op wat voor
+                            wijze dit voor Mprise toegepast kan worden. Hierbij heb ik ook onderzoek gedaan naar Blender
+                            (een 3D model programma) en model-viewer (een open-source Google framework). </p>
+
+                        <h5 class="date">Onderzoek vormen realities</h5>
+                        <p class="p_entry">Omdat de termen VR, AR en XR vaak vielen, maar nogal onduidelijk door elkaar
+                            heen werden gebruikt heb ik onderzocht welke vormen van realities er precies zijn. Uit dit
+                            onderzoek bleek al snel dat XR de verzamelnaam is van drie verschillende soorten realities.
+                            Dankzij dit onderzoek heb ik een duidelijk beeld gekregen over de verschillende soorten
+                            realities en kan ik daardoor de communicatie met de opdrachtgever verbeteren.</p>
+                        <h5 class="date">Onderzoek glastuinbouwsector</h5>
+                        <p class="p_entry">Als groep is er onderzoek gedaan naar de bedrijfseigenschappen van de
+                            glastuinbouwsector. Hierbij hebben we gekeken naar de processen en besturingsniveaus. Het
+                            voornaamste proces waar we onderzoek naar hebben gedaan is het productieproces. </p>
+                    </div>
+
+                    <!-- COMPETENTIE 3 -->
+                    <h2 onclick="toggleContent('entry3')">Je kiest ambitieuze leerdoelen en verkent disciplines buiten
+                        je eigen vakgebied.</h2>
+                    <div id="entry3" class="content">
+                        <h5 onclick ="toggleContent('entry_leerdoel_1')"class="date">Ik wil tijdens de minor graag meer kennis opdoen over bedrijfskunde in de
+                            breedste zin.</h5>
+                            <div id ="entry_leerdoel_1" class="content">
+                        <h6 onclick="toggleImage('BMC')" class="date">Business Model Canvas</h6>
+                            <p class="p_entry">Tijdens de minor heb ik geleerd hoe verschillende bedrijfseigenschappen
+                                vastgelegd kunnen worden. Dit hebben wij toegepast door het maken van een Business Model
+                                Canvas van Mprise. </p>
+                        
+                        <h6 onclick="toggleImage('TOM')" class="date">Target Operating Model</h6>
+                            <p class="p_entry">Tijdens de minor heb ik geleerd wat een Target Operating Model is en hoe
+                                dit opgesteld wordt. Door het maken van dit model heb ik geleerd wat de impact van een
+                                innovatie is bij een bedrijf. Dit vond ik tevens ook het leukste model om te maken,
+                                omdat we hierover tijdens de les een simpel/begrijpelijk voorbeeld hebben gekregen en
+                                het daarom makkelijker na te maken was.</p>
+                        
+                        <h6 onclick="toggleImage('entry_competenties')" class="date">
+                            Glastuinbouwsector</h6>
+                            <p class="p_entry">Tijdens het project heb ik geleerd over de glastuinbouwsector. De
+                                bedrijfsprocessen van de glastuinbouwsector, de verschillende bedrijfsfuncties en de
+                                toepassing van slimme technologieen vond ik hierbij allemaal erg interessant.</p>
+                            </div>
+
+                        <h5 onclick="toggleContent('entry_leerdoel_2')" class="date">Ik wil tijdens het project graag meer kennis opdoen over de verschillende
+                            soorten realities en hoe dit gemaakt wordt.</h5>
+                            <div id="entry_leerdoel_2" class="content">
+                        <h6 onclick="toggleImage('entry_competenties')" class="date">Realities</h6>
+                            <p class="p_entry">Tijdens het project heb ik geleerd over de verschillende soorten
+                                realities en de toepassingen per soort. Met name de toepassing van VR heb ik veel over
+                                geleerd, waaruit ik concludeer dat de glastuinbouwsector misschien nog niet klaar is
+                                voor een innovatie waarbij VR gebruikt wordt.</p>
+                        
+                        <h6 onclick="toggleImage('entry_competenties')"class="date">3D modellen</h6>
+                            <p class="p_entry">Tijdens het project heb ik geleerd over 3D modelleren. Ik heb in Blender
+                                een 3D model gemaakt van een kas. Dit 3D model heb ik gebruikt om een prototype van een
+                                interactieve Digital Twin te maken.</p>
+                            </div>
+
+                        <h5 onclick = "toggleContent('entry_leerdoel_3')" class="date">Ik wil tijdens de minor meer leren over microcontrollers</h5>
+                        <div id="entry_leerdoel_3" class="content">
+                        <h6 onclick="toggleImage('entry_competenties')" class="date">3D Model</h6>
+                            <p class="p_entry">Tijdens de minor heb ik geleerd hoe ik een 3D model ontwerp als behuizing
+                                van de PCB. Voor de minor heb ik nog nooit iets gedaan met 3D modelleren en daarom heb
+                                ik ook een hoop geleerd tijdens deze lessen.</p>
+                    
+                                <h6 onclick="toggleImage('entry_competenties')" class="date">PCB</h6> 
+                            <p class="p_entry">Tijdens de minor heb ik geleerd hoe ik een eigen PCB ontwerp. Gedurende
+                                mijn studie heb ik nagenoeg nooit iets gedaan met microcontrollers en dankzij de minor
+                                heb ik hier veel over geleerd. </p> 
+                    </div>
+
+
+                        <!-- COMPETENTIE 4 -->
+                    </div>
+                    <h2 onclick="toggleContent('entry4')">Je bent bewust bezig met je persoonlijke groei.</h2>
+                    <div id="entry4" class="content">
+                        <h6 class="date">Vragen stellen</h6>
+                        <p class="p_entry">Tijdens het project heb ik geleerd minder bang te zijn om vragen te stellen. Voordat ik aan het project begon vond ik het lastig om vragen te stellen aan mensen die ik niet (goed) ken. Tijdens het project is mij, dankzij mijn groepsgenoten, bewezen dat je ook prima vragen kan stellen aan mensen die je niet kent. Aan het einde van het project kan ik concluderen dat ik een erg prettig groepje had, we hebben namelijk duidelijk en leuk met elkaar gewerkt.</p>
+                        <h6 class="date">Communiceren met opdrachtgever</h6>
+                        <p class="p_entry">Tijdens het project heb ik geleerd dat ik niet bang hoef te zijn om te communiceren met de opdrachtgever. Voorheen vond ik het vervelend om kritisch te zijn op de dingen die een opdrachtgever zei, maar onze opdrachtgever stond volledig open voor feedback. Hij vond het prettig als er kritisch meegedacht werd en als wij (gegrond) feedback gaven op zijn eisen.</p>
+                    </div>
+
+                    <!-- COMPETENTIE 5 -->
+                    <div class="entry">
+                        <h2 onclick="toggleContent('entry5')">Je gebruikt feedback en zelfreflectie om te leren.</h2>
+                        <div id="entry5" class="content">
+                            <h6 class="date">Feedback van groepsgenoten</h6>
+                            <p class="p_entry">Tijdens het project hebben we op school een feedback moment gehad. Hierbij heb ik feedback gekregen waar ik echt iets aan heb. Het was prettig om te horen dat zij mij als rustig ervaren, terwijl ik dat eigenlijk totaal niet ben. Ook heb ik hieruit geleerd dat ik juist kritische vragen stel en dit zinvol is voor zowel mijzelf als anderen.</p>
+                            <h6 class="date">Feedback van bedrijf</h6>
+                            <p class="p_entry">Tijdens het project hebben we onder andere feedback gekregen van data-analisten van Mprise. Deze feedback hebben wij gebruikt om te reflecteren op wat wij op dat moment hadden gemaakt en dit zo aan te passen dat het meer voldoet aan de wensen.</p>
+                        </div>
+
+                        <!-- COMPETENTIE 6 -->
+                        <div class="entry">
+                            <h2 onclick="toggleContent('entry6')">Je helpt actief anderen groeien.</h2>
+                            <div id="entry6" class="content">
+                                <h6 class="date">Feedback op groepsgenoten</h6>
+                            <p class="p_entry">Tijdens het project hebben we op school een feedback moment gehad. Hierbij heb ik voor allebei mijn groepsgenoten nagedacht over hun verbeter- en goede punten. Dit heb ik gedaan door middel van een door school gegeven feedbackformulier. Kevin gaf aan het begin van het project aan dat hij zijn mening altijd uit en dat er in het verleden nog wel eens problemen hierdoor ontstonden. Hierbij heb ik als feedback gegeven dat ik dit totaal niet zo heb ervaren en dat hij juist trots mag zijn op een kritische blik. 
+                                Anthony gaf aan dat hij wat verlegen is. Tijdens het project is mij opgevallen dat dit erg meevalt. Hierbij heb ik hem als feedback gegeven dat hij altijd goed en prettig communiceert en dat hij op dezelfde wijze door moet gaan. 
+                                </p>
+                            <h6 class="date">Power BI</h6>
+                            <p class="p_entry">Tijdens het project ben ik bezig geweest met het meedenken met Power BI oplossingen. Hierdoor zijn we sneller tot verbeteringen gekomen van ons product. </p>
+                            <h6 class="date">Bedrijfskunde</h6>
+                            <p class="p_entry">Tijdens het project zijn wij met zijn drieeen bezig geweest met het maken van een Business Model Canvas, een Target Operating Model en heb ik het voortouw genomen in het onderzoek over de bedrijfseigenschappen in de glastuinbouwsector. Hierdoor hebben wij zowel van als aan elkaar veel geleerd over bedrijfskundige aspecten waar wij verder nooit iets over geleerd hebben. </p>
+                            <h6 class="date">Digital  Twins & Realities</h6>
+                            <p class="p_entry">Tijdens het project heb ik veel geleerd over Digital Twins en realities. Deze kennis heb ik gedeeld met mijn groepsgenoten en hierdoor heb ik kunnen bijdragen aan het verkrijgen nieuwe kennis. </p>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <!-- Add more entries as needed -->
+
+        </div>
+    </div>
     </div>
 
     <footer>
@@ -171,7 +424,8 @@
 
                     <!-- Indiv. portfolio's: -->
                     <div class="row">
-                        <a class="footer-row-container more-links-row personal-portfolios-link active-link-page" href="../portfolio's.html">
+                        <a class="footer-row-container more-links-row personal-portfolios-link active-link-page"
+                            href="../portfolio's.html">
                             <div class="footer-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
                                     class="bi bi-clipboard-data" viewBox="0 0 16 16" style="margin-top: -5px;">
